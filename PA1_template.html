@@ -129,7 +129,7 @@ plot(x = res_daily$interval, y = res_daily$steps, type = &quot;l&quot;,
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 ##    0.00    0.00    0.00   37.38   12.00  806.00    2304</code></pre>
 <p>The total number of NA’s is 2304.</p>
-<p>Devise a strategy for filling in all of the missing values in the dataset. use daily average for missing interval</p>
+<p>Devise a strategy for filling in all of the missing values in the dataset. use interval average across all days for missing interval</p>
 <pre class="r"><code>average_NA &lt;- data %&gt;%
     group_by(interval) %&gt;%
     summarize(daily_average = mean(steps, na.rm = TRUE))</code></pre>

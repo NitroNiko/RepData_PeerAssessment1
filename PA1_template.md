@@ -130,7 +130,7 @@ The total number of NA's is 2304.
 
 
 Devise a strategy for filling in all of the missing values in the dataset.
-use daily average for missing interval
+use interval average across all days for missing interval
 
 ```r
 average_NA <- data %>%
